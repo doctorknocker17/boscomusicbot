@@ -12,7 +12,7 @@ OPUS_LIBS = ['libopus-0.x86.dll', 'libopus-0.x64.dll',
 
 @client.event
 async def on_ready():
-    awail client.change_presence(game=discord.game(name="Bosco's Custom Bot"))
+    await client.change_presence(game=discord.game(name="Bosco's Custom Bot"))
     print("Bot is Ready.")
 
 
