@@ -10,10 +10,7 @@ from discord import opus
 OPUS_LIBS = ['libopus-0.x86.dll', 'libopus-0.x64.dll',
              'libopus-0.dll', 'libopus.so.0', 'libopus.0.dylib']
 
-async def on_ready():
-    await client.change_presence(game=discord.game(name="Bosco's Custom Bot"))
-    print("Bot is Ready.")
-
+bot.user.setGame(Bosco's Custom Bot)
 
 def load_opus_lib(opus_libs=OPUS_LIBS):
     if opus.is_loaded():
