@@ -92,8 +92,7 @@ async def queue_songs(con,clear):
             servers_songs[con.message.server.id]=song
             servers_songs[con.message.server.id].start()
             await bot.delete_message(now_playing[con.message.server.id])
-            msg=await bot.send_message(con.message.channel,"Bosco's Bot is Now playing {}").format(servers_songs[con.message.server.id].title))
-                now_playing[con.message.server.id]=msg
+            msg=await bot.send_message(con.message.channel,"Bosco's Bot is Now playing")
             now_playing[con.message.server.id]=msg
 
             if len(song_names[con.message.server.id]) >= 1:
